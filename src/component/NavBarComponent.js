@@ -1,16 +1,22 @@
 import React, { Component } from "react";
-import Nav from "./NavComponent";
+import TopNav from "./TopNavComponent";
 import SearchModal from "./SearchModalComponent";
 
-class NavBar extends Component {
+class HeaderNav extends Component {
     constructor(props) {
         super(props);
-        this.state = {};
+        this.state = {
+            
+        };
     }
 
     render() {
-        return <div></div>;
+        return (
+            <div>
+                <TopNav />
+            </div>
+        );
     }
 }
 
-export default NavBar;
+export default HeaderNav;
