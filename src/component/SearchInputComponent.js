@@ -3,7 +3,7 @@ import { Form, FormGroup, Label, Input } from "reactstrap";
 
 const SearchInput = () => {
   return (
-    <div className="justify-content-center">
+    <div>
       <Form className="d-flex align-items-center">
         <i className="fa fa-search pl-1 pr-3"></i>
         <FormGroup className="">

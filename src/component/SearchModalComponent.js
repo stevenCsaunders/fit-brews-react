@@ -18,7 +18,7 @@ const SearchModal = (props) => {
           <i className='fa fa-search'></i>
         </Button>
         <Modal isOpen={modal} toggle={toggle} className='search-modal modal-lg'>
-          <ModalHeader classname='d-flex align-items-center'  toggle={toggle} close={closeBtn}>
+          <ModalHeader toggle={toggle} close={closeBtn}>
             <SearchInput />
           </ModalHeader>
         </Modal>
