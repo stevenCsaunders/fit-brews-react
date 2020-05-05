@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import NavBar from './NavBarComponent';
+import SearchModal from './SearchModalComponent';
 //import Body
 //import Footer
 
@@ -13,7 +13,10 @@ class Main extends Component {
 
     render() {
         return (
-            <div></div>
+            <div>
+            <SearchModal />
+
+            </div>
         );
     }
 };
