@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import NavBar from './NavBarComponent';
 import HeaderNav from './NavBarComponent';
-import { Switch, Route, Redirect } from 'react-router-dom';
-import { DRINKS } from '../shared/Drinks';
+// import { Switch, Route, Redirect } from 'react-router-dom';
+import { DRINKS } from '../shared/drinks';
 
 class Main extends Component {
     constructor(props) {
@@ -16,9 +15,9 @@ class Main extends Component {
         return (
             <div>
                 <HeaderNav />
-            <div/>
+            </div>
         );
     }
-};
+}
 
 export default Main;
