@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Nav, Navbar, NavbarBrand, NavbarToggler, NavLink, Collapse, NavItem, Jumbotron } from "reactstrap";
+import SearchModal from "./SearchModalComponent";
 
 class TopNav extends Component {
     constructor(props) {
@@ -56,6 +57,7 @@ class TopNav extends Component {
                             </Nav>
                         </Collapse>
                     </div>
+                    <SearchModal />
                 </Navbar>
             </React.Fragment>
         );
