@@ -33,8 +33,8 @@ class TopNav extends Component {
                 </Jumbotron>
                 <Navbar light sticky="top" expand="md">
                     <div className="container">
-                        <NavbarBrand className="mr-auto" href="/">
-                            Hello World
+                        <NavbarBrand className="mr-auto" href="/home">
+                            FitBrews Icon Here.
                         </NavbarBrand>
                         <NavbarToggler onClick={this.toggleNav} />
                         <Collapse isOpen={this.state.isNavOpen} navbar>
@@ -57,6 +57,7 @@ class TopNav extends Component {
                             </Nav>
                         </Collapse>
                     </div>
+                    
                     <SearchModal />
                 </Navbar>
             </React.Fragment>
