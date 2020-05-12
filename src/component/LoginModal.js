@@ -50,7 +50,7 @@ class LoginModal extends Component {
                                     validators={{
                                         required,
                                         minLength: minLength(2),
-                                        maxLength: maxLength(2),
+                                        maxLength: maxLength(15),
                                     }}
                                     />
                                     <Errors className="text-danger"
@@ -72,8 +72,8 @@ class LoginModal extends Component {
                                     <Control.text model=".password" name="password" id="password" className="form-control" placeholder="Password" 
                                     validators={{
                                         required,
-                                        minLength: minLength(2),
-                                        maxLength: maxLength(2),
+                                        minLength: minLength(6),
+                                        maxLength: maxLength(15),
                                     }}
                                     />
                                     <Errors className="text-danger"
@@ -82,7 +82,7 @@ class LoginModal extends Component {
                                     components="div"
                                     messages={{
                                         required: "Required",
-                                        minLength: "Must be at least 2 characters",
+                                        minLength: "Must be at least 6 characters",
                                         maxLength: "Must be 15 characters or less",
                                     }}/>
                                 </Col>
