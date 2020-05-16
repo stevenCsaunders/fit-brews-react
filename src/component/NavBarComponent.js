@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import TopNav from "./TopNavComponent";
+import React, { Component } from 'react';
+import TopNav from './TopNavComponent';
 class HeaderNav extends Component {
     constructor(props) {
         super(props);
