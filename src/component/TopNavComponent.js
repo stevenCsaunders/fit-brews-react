@@ -1,7 +1,7 @@
-import React, { Component } from "react";
-import { Nav, Navbar, NavbarBrand, NavbarToggler, NavLink, Collapse, NavItem, Jumbotron } from "reactstrap";
-import SearchModal from "./SearchModalComponent";
-import LoginModal from "./LoginModal";
+import React, { Component } from 'react';
+import { Nav, Navbar, NavbarBrand, NavbarToggler, NavLink, Collapse, NavItem, Jumbotron, Media } from 'reactstrap';
+import SearchModal from './SearchModalComponent';
+import LoginModal from './LoginModal';
 
 class TopNav extends Component {
     constructor(props) {
@@ -23,35 +23,35 @@ class TopNav extends Component {
         return (
             <React.Fragment>
                 <Jumbotron fluid>
-                    <div className="container">
-                        <div className="row">
-                            <div className="col">
+                    <div className='container'>
+                        <div className='row'>
+                            <div className='col'>
                                 <h1>Fit Brews</h1>
                                 <h2>Drink to your health</h2>
                             </div>
                         </div>
                     </div>
                 </Jumbotron>
-                <Navbar light sticky="top" expand="md">
-                    <div className="container">
-                        <NavbarBrand className="mr-auto" href="/home">
-                            FitBrews Icon Here.
+                <Navbar light sticky='top' expand='md'>
+                    <div className='container'>
+                        <NavbarBrand className='mr-auto' href='/home'>
+                            <img src="https://i.gyazo.com/35e5d83ca78e7983c945e7ef6db7808d.png" alt="fit brews logo" className="mr-5"/>
                         </NavbarBrand>
                         <NavbarToggler onClick={this.toggleNav} />
                         <Collapse isOpen={this.state.isNavOpen} navbar>
                             <Nav navbar>
                                 <NavItem>
-                                    <NavLink className="nav-link" href="/home">
+                                    <NavLink className='nav-link' href='/home'>
                                         Home
                                     </NavLink>
                                 </NavItem>
                                 <NavItem>
-                                    <NavLink className="nav-link" href="/tags">
+                                    <NavLink className='nav-link' href='/tags'>
                                         Tags
                                     </NavLink>
                                 </NavItem>
                                 <NavItem>
-                                    <NavLink className="nav-link" href="/saved">
+                                    <NavLink className='nav-link' href='/saved'>
                                         Saved
                                     </NavLink>
                                 </NavItem>

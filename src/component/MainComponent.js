@@ -1,7 +1,9 @@
-import React, { Component } from "react";
-import HeaderNav from "./NavBarComponent";
+import React, { Component } from 'react';
+import HeaderNav from './NavBarComponent';
 import { Switch, Route, Redirect } from 'react-router-dom';
-import { DRINKS } from "../shared/Drinks";
+import { DRINKS } from '../shared/Drinks';
+
+import RenderItemCard from './ItemCard';
 
 class Main extends Component {
   constructor(props) {
@@ -17,6 +19,18 @@ class Main extends Component {
       <>
         <h1>Welcome to Fit Brews Homepage!</h1>
         <p>Join us for healthy and fit drink recipes</p>
+        <div className="container">
+          <div className="row">
+              <RenderItemCard />
+              <RenderItemCard />
+              <RenderItemCard />
+              <RenderItemCard />
+              <RenderItemCard />
+              <RenderItemCard />
+              <RenderItemCard />
+              <RenderItemCard />
+          </div>
+        </div>
       </>
       )};
 
