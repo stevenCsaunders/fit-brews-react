@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Nav, Navbar, NavbarBrand, NavbarToggler, NavLink, Collapse, NavItem, Jumbotron, Media } from 'reactstrap';
+import { Nav, Navbar, NavbarBrand, NavbarToggler, NavLink, Collapse, NavItem, Jumbotron } from 'reactstrap';
 import SearchModal from './SearchModalComponent';
 import LoginModal from './LoginModal';
 
@@ -22,17 +22,7 @@ class TopNav extends Component {
     render() {
         return (
             <React.Fragment>
-                <Jumbotron fluid>
-                    <div className='container'>
-                        <div className='row'>
-                            <div className='col'>
-                                <h1>Fit Brews</h1>
-                                <h2>Drink to your health</h2>
-                            </div>
-                        </div>
-                    </div>
-                </Jumbotron>
-                <Navbar light sticky='top' expand='md'>
+            <Navbar light sticky='top' expand='md'>
                     <div className='container'>
                         <NavbarBrand className='mr-auto' href='/home'>
                             <img src="https://i.gyazo.com/35e5d83ca78e7983c945e7ef6db7808d.png" alt="fit brews logo" className="mr-5"/>
@@ -61,6 +51,16 @@ class TopNav extends Component {
                     <LoginModal />
                     <SearchModal />
                 </Navbar>
+                <Jumbotron fluid>
+                    <div className='container'>
+                        <div className='row'>
+                            <div className='col'>
+                                <h1>Fit Brews</h1>
+                                <h2>Drink to your health</h2>
+                            </div>
+                        </div>
+                    </div>
+                </Jumbotron>
             </React.Fragment>
         );
     }
