@@ -1,20 +1,13 @@
-import React, { Component } from 'react';
+import React from 'react';
 import TopNav from './TopNavComponent';
-class HeaderNav extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            
-        };
-    }
 
-    render() {
+const HeaderNav = () => {
         return (
             <div>
                 <TopNav />
             </div>
         );
     }
-}
+
 
 export default HeaderNav;

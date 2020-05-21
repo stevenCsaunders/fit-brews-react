@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import HeaderNav from './NavBarComponent';
 import { Switch, Route, Redirect } from 'react-router-dom';
-import { DRINKS } from '../shared/Drinks';
-
-import RenderItemCard from './ItemCard';
+import { DRINKS } from '../shared/drinks';
+import HomePage  from './HomeComponent'
+import Tags from './TagsComponent'
+import Footer from './Footer'
 
 class Main extends Component {
   constructor(props) {
@@ -14,35 +15,13 @@ class Main extends Component {
   }
 
   render() {
-    const HomePage = () => {
-      return (
-      <>
-        <h1>Welcome to Fit Brews Homepage!</h1>
-        <p>Join us for healthy and fit drink recipes</p>
-        <div className="container">
-          <div className="row">
-              <RenderItemCard />
-              <RenderItemCard />
-              <RenderItemCard />
-              <RenderItemCard />
-              <RenderItemCard />
-              <RenderItemCard />
-              <RenderItemCard />
-              <RenderItemCard />
-          </div>
-        </div>
-      </>
-      )};
-
+    
     //Tags is placeholder until Tags component is made.
-    const Tags = () => {
-      return (
-      <h1>This is the tags page!</h1>
-      )};
+
     // Placeholder ends.
 
     return (
-      <div>
+      <div className='wrapper'>
         <HeaderNav />
         <Switch>
           <Route path='/home' component={HomePage}/>
@@ -50,6 +29,7 @@ class Main extends Component {
           <Route exact path='/saved' component={HomePage} />
           <Redirect to='/home' />
         </Switch>
+        <Footer />
       </div>
     );
   }
