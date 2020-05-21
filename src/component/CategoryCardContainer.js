@@ -4,8 +4,8 @@ import RenderItemCard from './ItemCard';
 const CategoryCardContainer = () => {
     return (
 
-        <div className="container ItemCardContainer">
-                <h3 className="mb-0 ItemContainerTitle">Category 1</h3>
+        <div className="container item-card-container">
+                <h3 className="mb-0 item-container-title">Category 1</h3>
                 <div className="row mt-0 pt-0">
                     <RenderItemCard />
                     <RenderItemCard />
