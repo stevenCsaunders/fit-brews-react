@@ -42,14 +42,31 @@
   background-color: #1eb3a6;
 }
 
-.itemCard {
-  position: relative;
-  background-color: #1eb3a6;
-  margin: 2em;
-}
-
 footer {
   background-color: #1eb3a6;
   color: white;
   
+}
+
+.item-card {
+  position: relative;
+  background-color: #1eb3a6;
+  margin: 0.5em 0.5em 0.5em 0.5em;
+}
+
+.item-card-container {
+  border: 1px solid black;
+  margin-bottom: 0.5em;
+}
+
+.item-container-title {
+  text-align: left;
+  color: #1eb3a6;
+}
+
+.item-card-button {
+  margin-right: 8em;
+  padding: 0.3em;
+  color: white;
+  background-color: #f77575;
 }
