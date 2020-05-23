@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, CardImg, CardText, CardBody, CardTitle, Button, CardSubtitle } from "reactstrap";
+import { Card, CardImg, CardText, CardBody, CardTitle, Button } from "reactstrap";
 
 function RenderItemCard() {
     return (
@@ -9,9 +9,9 @@ function RenderItemCard() {
                 <CardBody>
                     <CardTitle>Item Name</CardTitle>
                     <CardText>Item Description</CardText>
-                    <CardSubtitle>Tags Here?</CardSubtitle>
                 </CardBody>
-                <Button color="info">
+
+                <Button className="item-card-button">
                     See Recipe {/* Switch to items page component when clicked */}
                 </Button>
             </Card>

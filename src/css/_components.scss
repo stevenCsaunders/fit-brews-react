@@ -1,3 +1,79 @@
+@import 'settings';
+
+// Navbar Component
 .navbar {
-	background-color: #1eb3a6;
+	background-color: $darkgreen;
+}
+// Item Card Container
+.item-card-container {
+	border: 1px solid black;
+	margin-bottom: 0.5em;
+}
+
+.item-container-title {
+	text-align: left;
+	color: $darkgreen;
+}
+
+// Item Card
+.item-card {
+	margin: 1rem 0;
+}
+
+.item-card-button {
+	margin: 1rem;
+	padding: 0.5rem;
+	color: white;
+	background-color: $watermelon;
+}
+
+// Footer Component
+footer {
+	h5 {
+		text-transform: uppercase;
+	}
+	p {
+		margin-right: 1rem;
+	}
+}
+
+//Footer Contact Component
+.footer-contact {
+
+}
+.footer-email-form {
+	width: 100%;
+	border: none;
+	border-radius: 0.2rem;
+	font: $contentfont;
+	color: $lightgray;
+	.email-submit-button {
+		font-size: 1rem;
+		width: 100%;
+	}
+	.email-input::placeholder {
+		color: $darkgreen;
+	}
+}
+
+// Footer Social
+.footer-social {
+	.social-icons {
+		list-style: none;
+	}
+	.social-icon {
+		margin-right: 2rem;
+	}
+}
+
+// Footer Nav Component
+.footer-support {
+	width: 20%;
+	.support-item {
+		padding: .5rem 0;
+		a {
+			color: white;
+		}
+	}
+
 }
