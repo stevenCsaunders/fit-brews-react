@@ -1,1 +1,46 @@
+@import 'settings';
 
+h1 {
+    font-size: 5vw;
+}
+
+h2 {
+    font-size: 3rem;
+}
+
+h3 {
+    font-size: 2.25rem;
+}
+
+h4 {
+    font-size: 1.75rem;
+}
+
+h5 {
+    font-size: 1.2rem;
+}
+
+p {
+    font-size: .9rem;
+    line-height: 1.5;
+}
+
+a {
+    text-decoration: none;
+    font-size: 1rem;
+}
+button {
+    font-size: .9rem;
+}
+
+hr {
+    width: 80%;
+    border-style: dotted;
+    border-color: $lightgreen;
+}
+
+footer {
+    padding: 3rem 0 5rem 0;
+    background-color: $darkgreen;
+    color: white;
+}
