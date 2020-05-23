@@ -1,7 +1,11 @@
 import React from 'react';
 import RenderItemCard from './ItemCard';
+import DRINKS from '../shared/drinks';
 
-const CategoryCardContainer = () => {
+//Need name, image, description, category
+const CategoryCardContainer = ({name, image, description, category}) => {
+    
+
     return (
 
         <div className="container item-card-container">
