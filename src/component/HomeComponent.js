@@ -1,8 +1,9 @@
 import React from 'react';
-import RenderItemCard from './ItemCard';
 import FeaturedCardContainer from './FeaturedCardContainer';
 import CategoryCardContainer from './CategoryCardContainer';
+import { DRINKS } from '../shared/drinks'
 
+const drinks = [...DRINKS]  //Spread the DRINKS array of objects in to another array 
 
 const HomePage = () => {
     return (
@@ -11,16 +12,8 @@ const HomePage = () => {
       <p>Join us for healthy and fit drink recipes</p>
       <div className="container">
         <div className="row">
-            <FeaturedCardContainer />
-            <CategoryCardContainer />
-            <RenderItemCard />
-            <RenderItemCard />
-            <RenderItemCard />
-            <RenderItemCard />
-            <RenderItemCard />
-            <RenderItemCard />
-            <RenderItemCard />
-            <RenderItemCard />
+            <FeaturedCardContainer drinks={drinks} />
+            <CategoryCardContainer drinks={drinks} />
         </div>
       </div>
     </>
