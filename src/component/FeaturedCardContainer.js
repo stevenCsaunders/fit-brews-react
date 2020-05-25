@@ -2,8 +2,9 @@ import React from 'react'
 import RenderItemCard from './ItemCard'
 
 const FeaturedCardContainer = ({ drinks }) => {
+    const checkFeatured = drink => drink.featured === true;
     const featuredDrinks = drinks
-        .filter(drink => drink.featured === true)
+        .filter(checkFeatured)
         .slice(0, 4)
         .map((drink) => {
             return (
