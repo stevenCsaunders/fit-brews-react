@@ -34,7 +34,7 @@ const FooterContact = () => {
 				to your inbox?
 			</p>
 			<LocalForm
-				class="footer-email-form"
+				className="footer-email-form"
 				onSubmit={(value) => handleSubmit(value)}
 			>
 				<Row className="form-group d-felx flex-column flex-md-row mt-md-2">
@@ -80,28 +80,28 @@ const FooterSocial = () => {
 	return (
 		<div className="footer-social align-items-center align-items-md-start mx-md-4 my-md-0 my-4 px-0 px-md-4">
 			<h5>Connect With Us</h5>
-			<a class="footer-logo mb-3" href="#">
+			<a className="footer-logo mb-3" href="#">
 				<img
 					src={require("../shared/images/logo.png")}
-					class="logo"
+					className="logo"
 					alt="Fit Brews"
 				/>
 			</a>
-			<p class="d-none d-sm-inline-block">Share your favorite drink recipes!</p>
-			<ul class="social-icons d-flex align-items-start">
-				<li class="social-icon">
+			<p className="d-none d-sm-inline-block">Share your favorite drink recipes!</p>
+			<ul className="social-icons d-flex align-items-start">
+				<li className="social-icon">
 					<a className="btn btn-social-icon">
-						<span class="fa fa-twitter"></span>
+						<span className="fa fa-twitter"></span>
 					</a>
 				</li>
-				<li class="social-icon">
-					<a class="btn btn-social-icon">
-						<i class="fa fa-facebook"></i>
+				<li className="social-icon">
+					<a className="btn btn-social-icon">
+						<i className="fa fa-facebook"></i>
 					</a>
 				</li>
-				<li class="social-icon">
-					<a class="btn btn-social-icon">
-						<span class="fa fa-instagram"></span>
+				<li className="social-icon">
+					<a className="btn btn-social-icon">
+						<span className="fa fa-instagram"></span>
 					</a>
 				</li>
 			</ul>
@@ -113,14 +113,14 @@ const FooterNav = () => {
 	return (
 		<div className="footer-support px-0 px-md-4">
 			<h5>Support</h5>
-			<ul class="navbar-nav footer-nav">
-				<li class="support-item">
+			<ul className="navbar-nav footer-nav">
+				<li className="support-item">
 					<Link to="/tags">About</Link>
 				</li>
-				<li class="support-item">
+				<li className="support-item">
 					<Link to="/home">Contact</Link>
 				</li>
-				<li class="support-item">
+				<li className="support-item">
 					<Link to="/tags">FAQ</Link>
 				</li>
 			</ul>

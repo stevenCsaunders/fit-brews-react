@@ -2,9 +2,6 @@ import React from 'react';
 import { Card, CardImg, CardText, CardBody, CardTitle, Button } from "reactstrap";
 
 function RenderItemCard({name, image, description}) {
-
-    console.log(name);
-
     return (
         <div className="col-3">
             <Card className="item-card">
