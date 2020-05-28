@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
-import HeaderNav from './NavBarComponent';
+import Hero from './NavBarComponent';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import { DRINKS } from '../shared/drinks';
-import HomePage  from './HomeComponent'
-import Tags from './TagsComponent'
-import Footer from './Footer'
+import HomePage  from './HomeComponent';
+import Tags from './TagsComponent';
+import ReviewHomeComponent from './ReviewHomeComponent';
+import Footer from './Footer';
 
 class Main extends Component {
   constructor(props) {
@@ -22,13 +23,14 @@ class Main extends Component {
 
     return (
       <div className='wrapper'>
-        <HeaderNav />
+        <Hero />
         <Switch>
           <Route path='/home' component={HomePage}/>
           <Route exact path='/tags' component={Tags}/>
           <Route exact path='/saved' component={HomePage} />
           <Redirect to='/home' />
         </Switch>
+        <ReviewHomeComponent drinks={ this.state.drinks } />
         <Footer />
       </div>
     );

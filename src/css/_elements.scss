@@ -2,13 +2,16 @@
 
 h1 {
     font-size: 5vw;
+    font-family: $displayfont;
 }
 
 h2 {
     font-size: 3rem;
+    font-family: $contentfont;
 }
 
 h3 {
+    font-family: $displayfont;
     font-size: 2.25rem;
 }
 
@@ -17,10 +20,12 @@ h4 {
 }
 
 h5 {
+    font-family: $contentfont;
     font-size: 1.2rem;
 }
 
 p {
+    font-family: $contentfont;
     font-size: .9rem;
     line-height: 1.5;
 }
