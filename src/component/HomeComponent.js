@@ -5,6 +5,7 @@ import { DRINKS } from '../shared/drinks';
 
 const drinks = [...DRINKS]  //Spread the DRINKS array of objects in to another array 
 
+
 const HomePage = () => {
     return (
     <>

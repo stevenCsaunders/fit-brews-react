@@ -1,6 +1,7 @@
 import React from 'react'
 import RenderItemCard from './ItemCard'
 
+
 const FeaturedCardContainer = ({ drinks }) => {
 	const checkFeatured = (drink) => drink.featured === true
 	const featuredDrinks = drinks
