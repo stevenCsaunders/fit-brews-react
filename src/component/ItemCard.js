@@ -10,7 +10,6 @@ function RenderItemCard({name, image, description}) {
                     <CardTitle>{name}</CardTitle>
                     <CardText>{description}</CardText>
                 </CardBody>
-
                 <Button className="item-card-button">
                     See Recipe {/* Switch to items page component when clicked */}
                 </Button>
