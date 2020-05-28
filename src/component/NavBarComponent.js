@@ -3,7 +3,7 @@ import TopNav from './TopNavComponent';
 
 const HeaderNav = () => {
         return (
-            <div>
+            <div className="hero">
                 <TopNav />
             </div>
         );

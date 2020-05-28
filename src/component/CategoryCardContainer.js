@@ -8,21 +8,22 @@ const CategoryCardContainer = ({ drinks }) => {
 		.slice(0, 4)
 		.map((drink) => {
 			return (
-                <RenderItemCard
-                    key={drink.id} // Have to add the id for the map method
-                    name={drink.name}
-                    image={drink.image}
-                    description={drink.description}
-                />
-			)
+				<div className="col col-md-3" key={drink.id}>
+					<RenderItemCard
+						name={drink.name}
+						image={drink.image}
+						description={drink.description}
+					/>
+				</div>
+			);
 		})
 
 	return (
-		<div className="container item-card-container">
-			<h3 className="mb-0 item-container-title">Fruit Drinks</h3>
-			<div className="row mt-0 pt-0">{drinkCategory}</div>
+		<div className="container item-card-container category">
+			<h3 className="item-container-title">Best Fruit Drinks</h3>
+			<div className="row">{drinkCategory}</div>
 		</div>
-	)
+	);
 }
 
 export default CategoryCardContainer

@@ -1,30 +1,84 @@
 @import 'settings';
 
+//Hero Component
+.hero {
+	margin-bottom: 5rem;
+}
+
 // Navbar Component
 .navbar {
 	background-color: $darkgreen;
 }
 // Item Card Container
-.item-card-container {
-	border: 1px solid black;
-	margin-bottom: 0.5em;
-}
-
 .item-container-title {
 	text-align: left;
 	color: $darkgreen;
 }
 
+//Featured Drinks Container
+.featured {
+	border-bottom: 1px solid $lightgreen;
+	margin-bottom: 5rem;
+	padding-bottom: 5rem;
+
+	.item-card-image {
+		height: 15rem;
+		width: 100%;
+	}
+}
+
+//Category Drinks Container
+.category {
+	margin-bottom: 5rem;
+
+	.item-card-image {
+		height: 10rem;
+		width: 10rem;
+		border-radius: 50%;
+	}
+}
+
 // Item Card
 .item-card {
 	margin: 1rem 0;
+	border: none;
+	border-radius: 5px;
+	box-shadow: 0px 0px 12px -1px rgba(200,200,200,1);
+	padding: 1rem 1rem;
+	.item-card-name {
+		h5 {
+		color: $watermelon;
+		font-weight: 700;
+		}
+	}
+}
+
+.item-card-image {
+	object-fit: cover;
+	border: none;
+	align-self: center;
 }
 
 .item-card-button {
-	margin: 1rem;
 	padding: 0.5rem;
 	color: white;
 	background-color: $watermelon;
+	border: none;
+}
+
+//Home Page Reviews
+.home-review-wrapper {
+	margin: 2rem auto 5rem auto;
+	border-top: 1px solid $tangerine;
+	border-bottom: 1px solid $tangerine;
+	color: $tangerine;
+	width: 80%;
+	text-align: center;
+	padding: 3rem 5%;
+	h5 {
+		font-size: 1.5rem;
+		font-weight: 200;
+	}
 }
 
 // Footer Component
@@ -67,9 +121,10 @@ footer {
 .footer-support {
 	width: 20%;
 	.support-item {
-		padding: .5rem 0;
+		padding: 0.5rem 0;
 		a {
 			color: white;
 		}
 	}
 }
+
