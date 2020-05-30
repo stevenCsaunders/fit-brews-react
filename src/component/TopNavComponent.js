@@ -36,8 +36,8 @@ class TopNav extends Component {
                                     </NavLink>
                                 </NavItem>
                                 <NavItem>
-                                    <NavLink className='nav-link' href='/tags'>
-                                        Tags
+                                    <NavLink className='nav-link' href='/categories'>
+                                        Categories
                                     </NavLink>
                                 </NavItem>
                                 <NavItem>
