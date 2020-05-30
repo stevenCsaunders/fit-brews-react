@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import Hero from './NavBarComponent';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import { DRINKS } from '../shared/drinks';
+import Hero from './NavBarComponent';
 import HomePage  from './HomeComponent';
-import Tags from './TagsComponent';
+import CategoryComponent from './CategoryComponent';
 import ReviewHomeComponent from './ReviewHomeComponent';
 import Footer from './Footer';
 
@@ -26,7 +26,7 @@ class Main extends Component {
         <Hero />
         <Switch>
           <Route path='/home' component={HomePage}/>
-          <Route exact path='/tags' component={Tags}/>
+          <Route exact path='/categories' component={CategoryComponent} />
           <Route exact path='/saved' component={HomePage} />
           <Redirect to='/home' />
         </Switch>
