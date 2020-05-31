@@ -1,6 +1,7 @@
 import React from 'react';
 import FeaturedCardContainer from './FeaturedCardContainer';
 import CategoryCardContainer from './CategoryCardContainer';
+import ReviewHomeComponent from './ReviewHomeComponent'
 import { DRINKS } from '../shared/drinks';
 
 const drinks = [...DRINKS]  //Spread the DRINKS array of objects in to another array 
@@ -15,6 +16,7 @@ const HomePage = () => {
             <CategoryCardContainer drinks={ drinks } />
         </div>
       </div>
+      <ReviewHomeComponent drinks={ drinks } />
     </>
     )};
 

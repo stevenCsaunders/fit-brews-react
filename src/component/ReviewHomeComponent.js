@@ -7,7 +7,7 @@ const ReviewComponent = ({ drinks }) => {
 		<div className="home-review-wrapper">
 			<h5 className="home-drink-review">"{randomDrink.review}"
 			</h5>
-			<span className="home-drink-rating">{randomDrink.rating}</span>
+			<span className="home-drink-rating"> Rating: {randomDrink.rating}/5</span>
 		</div>
 	)
 }
