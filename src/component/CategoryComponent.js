@@ -4,7 +4,7 @@ import { DRINKS } from '../shared/drinks';
 
 const drinks = [...DRINKS]
 
-const CategoryComponent = () => {
+const CategoryListComponent = () => {
     return (
         <>
             <CategoryCardContainer drinks={ drinks }/>
@@ -15,4 +15,4 @@ const CategoryComponent = () => {
     )
 }
 
-export default CategoryComponent;
+export default CategoryListComponent;

@@ -3,7 +3,7 @@ import { Switch, Route, Redirect } from 'react-router-dom';
 import { DRINKS } from '../shared/drinks';
 import Hero from './NavBarComponent';
 import HomePage  from './HomeComponent';
-import CategoryComponent from './CategoryComponent';
+import CategoryListComponent from './CategoryComponent';
 import ReviewHomeComponent from './ReviewHomeComponent';
 import Footer from './Footer';
 
@@ -26,7 +26,7 @@ class Main extends Component {
         <Hero />
         <Switch>
           <Route path='/home' component={HomePage}/>
-          <Route exact path='/categories' component={CategoryComponent} />
+          <Route exact path='/categories' component={CategoryListComponent} />
           <Route exact path='/saved' component={HomePage} />
           <Redirect to='/home' />
         </Switch>
