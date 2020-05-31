@@ -41,8 +41,8 @@ class TopNav extends Component {
                                     </NavLink>
                                 </NavItem>
                                 <NavItem>
-                                    <NavLink className='nav-link' href='/saved'>
-                                        Saved
+                                    <NavLink className='nav-link' href='/drink test'>
+                                        Drink Test
                                     </NavLink>
                                 </NavItem>
                             </Nav>
