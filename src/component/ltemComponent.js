@@ -1,5 +1,15 @@
 import React from 'react'
 
+
+// const RenderIngredients = () => {
+//     render() {
+//         return(
+
+//         );
+//     }
+    
+// }
+
 const ItemComponent = () => {
 	return (
 		<div className="container">
