@@ -17,6 +17,15 @@ class Main extends Component {
   }
 
   render() {
+    const categories = this.state.drinks.map((drink) => drink.category[0])
+    const uniqueCategories = [...new Set(categories)];
+
+    const Home = () => {
+      return (
+        <HomePage drinks={this.state.drinks} uniqueCategories={uniqueCategories}/>
+      )
+    }
+    
     const DrinkWithCategory = ({ match }) => {
       return(
         <CategoryItems 
@@ -29,8 +38,8 @@ class Main extends Component {
       <div className="wrapper">
         <Hero />
         <Switch>
-          <Route path="/home" component={HomePage} />
-          <Route exact path="/categories" render={() => <CategoryListComponent drinks={this.state.drinks} />} />
+          <Route path="/home" component={Home} />
+          <Route exact path="/categories" render={() => <CategoryListComponent drinks={this.state.drinks} uniqueCategories={uniqueCategories} />} />
           <Route path='category/:drinkCategory' component={DrinkWithCategory} />
           <Route exact path="/drink test" component={ItemComponent} />  {/* Needs to be based on drink id */}
           <Redirect to="/home" />
