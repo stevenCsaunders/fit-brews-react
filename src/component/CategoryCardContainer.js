@@ -3,7 +3,7 @@ import RenderItemCard from './ItemCard'
 
 const CategoryCardContainer = ({ drinks, category }) => {
 	
-	const checkCategory = checkCat => checkCat === category
+	const checkCategory = checkCat => checkCat.toLowerCase() === category.toLowerCase()
 
 	//Something here is breaking
 	const drinkCategory = drinks
