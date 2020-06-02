@@ -2,14 +2,11 @@ import React from 'react'
 import RenderItemCard from './ItemCard'
 
 const CategoryCardContainer = ({ drinks, category }) => {
-	console.log(category);
-	console.log(drinks);
 	
-	const checkCategory = (checkCat) =>
-		checkCat === category
+	const checkCategory = checkCat => checkCat === category
 
-		//Something here is breaking
-		const drinkCategory = drinks
+	//Something here is breaking
+	const drinkCategory = drinks
 		.filter((drink) => drink.category.some(checkCategory))
 		.slice(0, 4)
 		.map((drink) => {
@@ -22,8 +19,8 @@ const CategoryCardContainer = ({ drinks, category }) => {
 					/>
 				</div>
 			)
-		});
-		// End break
+		})
+	// End break
 
 	return (
 		<div className="container item-card-container category">

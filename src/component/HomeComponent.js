@@ -14,7 +14,7 @@ const HomePage = ({drinks}) => {
             <FeaturedCardContainer drinks={ drinks } />
         </div>
         <div className="row">
-            <CategoryCardContainer drinks={ drinks } category={randomDrink.category} />
+            <CategoryCardContainer drinks={ drinks } category={randomDrink.category[0]} />
         </div>
       </div>
       <ReviewHomeComponent drinks={ drinks } />
