@@ -176,7 +176,7 @@ export const DRINKS = [
             fat: 8,
         },
         description: "This is the description",
-        category:["Fruit"], //used for drink categories
+        category:["Liquid"], //used for drink categories
         review: "Pork loin tenderloin chuck landjaeger hamburger, velit aliqua cupidatat quis capicola laboris shoulder.", //This will be broken out in to a separate review.js file 
         rating: 5
     }

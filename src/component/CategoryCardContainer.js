@@ -1,29 +1,35 @@
 import React from 'react'
 import RenderItemCard from './ItemCard'
 
-const CategoryCardContainer = ({ drinks }) => {
-	const checkCategory = (category) => category.toLowerCase() === 'fruit';
+const CategoryCardContainer = ({ drinks, category }) => {
+	
+	const checkCategory = checkCat => checkCat.toLowerCase() === category.toLowerCase()
+
+	//Something here is breaking
 	const drinkCategory = drinks
 		.filter((drink) => drink.category.some(checkCategory))
 		.slice(0, 4)
 		.map((drink) => {
 			return (
-				<div className="col col-md-3" key={drink.id}>
+				<div className="col col-md-3 test" key={drink.id}>
 					<RenderItemCard
 						name={drink.name}
 						image={drink.image}
 						description={drink.description}
 					/>
 				</div>
-			);
+			)
 		})
+	// End break
 
 	return (
 		<div className="container item-card-container category">
-			<h3 className="item-container-title">Best Fruit Drinks</h3>
+			<a href="www.msn.com">
+				<h3 className="item-container-title">Best {category} Drinks</h3>
+			</a>
 			<div className="row">{drinkCategory}</div>
 		</div>
-	);
+	)
 }
 
 export default CategoryCardContainer

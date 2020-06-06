@@ -3,6 +3,7 @@ import { Row } from 'reactstrap';
 import ItemCard from './ItemCard';
 
 const CategoryItems = () => {
+
     return (
         <Row>
             <ItemCard className="col-md-2"/>
@@ -14,5 +15,6 @@ const CategoryItems = () => {
         </Row>
     );
 };
+
 
 export default CategoryItems;

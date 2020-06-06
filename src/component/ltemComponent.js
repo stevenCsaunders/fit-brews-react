@@ -1,5 +1,15 @@
 import React from 'react'
 
+
+// const RenderIngredients = () => {
+//     render() {
+//         return(
+
+//         );
+//     }
+    
+// }
+
 const ItemComponent = () => {
 	return (
 		<div className="container">
@@ -7,7 +17,7 @@ const ItemComponent = () => {
 				<div classNamel="col">
 					<div className="row">
 						<img
-							src="../shared/images/categoryPhoto5.png"
+							src={require("../shared/images/categoryPhoto5.png")}
 							alt="Drink Name"
 						/>
 					</div>
