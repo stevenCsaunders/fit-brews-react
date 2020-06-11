@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import {
 	Card,
 	CardImg,
@@ -8,7 +9,7 @@ import {
 	Button,
 } from 'reactstrap'
 
-function RenderItemCard({ name, image, description }) {
+function RenderItemCard({ name, image, description, category }) {
 
 	return (
 		<Card className="item-card">
@@ -24,6 +25,11 @@ function RenderItemCard({ name, image, description }) {
 				<CardText className="item-card-description">
 					{description}
 				</CardText>
+				<Link to={`/${category}`}>
+				<CardText className="item-card-description">
+					{category}
+				</CardText>
+				</Link>
 			</CardBody>
 			<Button className="item-card-button">See Recipe</Button>
 		</Card>

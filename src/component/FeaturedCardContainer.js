@@ -14,6 +14,7 @@ const FeaturedCardContainer = ({ drinks }) => {
 						name={drink.name}
 						image={drink.image}
 						description={drink.description}
+						drink={drink.category}
 					/>
 				</div>
 			)

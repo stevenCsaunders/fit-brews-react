@@ -1,11 +1,11 @@
 import React from 'react'
+
 import RenderItemCard from './ItemCard'
 
 const CategoryCardContainer = ({ drinks, category }) => {
 	
 	const checkCategory = checkCat => checkCat.toLowerCase() === category.toLowerCase()
 
-	//Something here is breaking
 	const drinkCategory = drinks
 		.filter((drink) => drink.category.some(checkCategory))
 		.slice(0, 4)
@@ -16,17 +16,17 @@ const CategoryCardContainer = ({ drinks, category }) => {
 						name={drink.name}
 						image={drink.image}
 						description={drink.description}
+						category={drink.category}
 					/>
 				</div>
 			)
 		})
-	// End break
+		
+
 
 	return (
 		<div className="container item-card-container category">
-			<a href="www.msn.com">
 				<h3 className="item-container-title">Best {category} Drinks</h3>
-			</a>
 			<div className="row">{drinkCategory}</div>
 		</div>
 	)
