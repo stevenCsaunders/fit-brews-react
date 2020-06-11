@@ -31,7 +31,7 @@ class TopNav extends Component {
                         <Collapse isOpen={this.state.isNavOpen} navbar>
                             <Nav navbar>
                                 <NavItem>
-                                    <NavLink className='nav-link' href='/home'>
+                                    <NavLink className='nav-link' href='/'>
                                         Home
                                     </NavLink>
                                 </NavItem>
@@ -41,7 +41,7 @@ class TopNav extends Component {
                                     </NavLink>
                                 </NavItem>
                                 <NavItem>
-                                    <NavLink className='nav-link' href='/drink test'>
+                                    <NavLink className='nav-link' href='/drink'>
                                         Drink Test
                                     </NavLink>
                                 </NavItem>

@@ -36,6 +36,11 @@
 		width: 10rem;
 		border-radius: 50%;
 	}
+	.category-items {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	
 }
 
 // Item Card
@@ -80,6 +85,7 @@
 		font-weight: 200;
 	}
 }
+
 
 // Footer Component
 footer {

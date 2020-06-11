@@ -1,20 +1,19 @@
-import React from 'react';
-import { Row } from 'reactstrap';
-import ItemCard from './ItemCard';
+import React from 'react'
+
+function RenderItems() {
+	return (
+		<div>
+			Test Render Items
+		</div>
+	)
+}
 
 const CategoryItems = () => {
+	return (
+		<div>
+			<RenderItems />
+		</div>
+	)
+}
 
-    return (
-        <Row>
-            <ItemCard className="col-md-2"/>
-            <ItemCard className="col-md-2"/>
-            <ItemCard className="col-md-2"/>
-            <ItemCard className="col-md-2"/>
-            <ItemCard className="col-md-2"/>
-            <ItemCard className="col-md-2"/>
-        </Row>
-    );
-};
-
-
-export default CategoryItems;
+export default CategoryItems
