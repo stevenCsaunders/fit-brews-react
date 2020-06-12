@@ -30,13 +30,15 @@ class Main extends Component {
 		}
 
 		const DrinkWithCategory = ({ match }) => {
+			console.log("Below!")
+			console.log(match);
 			return (
 				<CategoryItems
 					category={this.state.drinks.filter(
 						(drink) =>
 							drink.category === +match.params.drink_category
 					)}
-          drinks={this.state.drinks}
+          			drinks={this.state.drinks}
 				/>
 			)
 		}
@@ -60,7 +62,7 @@ class Main extends Component {
 						path="/:drink_category"
 						component={DrinkWithCategory}
 					/>
-					<Route exact path="/drink" component={ItemComponent} />{' '}
+					<Route path="/:drink_category/:drink_name" component={ItemComponent} />
 					{/* Needs to be based on drink id */}
 					<Redirect to="/home" />
 				</Switch>

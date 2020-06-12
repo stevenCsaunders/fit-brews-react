@@ -10,18 +10,21 @@ import {
 } from 'reactstrap'
 
 function RenderItemCard({ name, image, description, category }) {
-
 	return (
 		<Card className="item-card">
-			<CardImg
-				className="item-card-image"
-				src={image}
-				alt="Item picture"
-			/>
+			<Link to={`/categories/${category}/${name}`}>
+				<CardImg
+					className="item-card-image"
+					src={image}
+					alt="Item picture"
+				/>
+			</Link>
 			<CardBody className="item-card-body">
-				<CardTitle className="item-card-name">
-					<h5>{name}</h5>
-				</CardTitle>
+				<Link to={`/categories/${category}/${name}`}>
+					<CardTitle className="item-card-name">
+						<h5>{name}</h5>
+					</CardTitle>
+				</Link>
 				<CardText className="item-card-description">
 					{description}
 				</CardText>

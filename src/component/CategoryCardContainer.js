@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { Link } from 'react-router-dom';
 import RenderItemCard from './ItemCard'
 
 const CategoryCardContainer = ({ drinks, category }) => {
@@ -26,8 +26,10 @@ const CategoryCardContainer = ({ drinks, category }) => {
 
 	return (
 		<div className="container item-card-container category">
-				<h3 className="item-container-title">Best {category} Drinks</h3>
-			<div className="row">{drinkCategory}</div>
+				<Link to={`/categories/${category}`}>
+					<h3 className="item-container-title">Best {category} Drinks</h3>
+				</Link>
+				<div className="row">{drinkCategory}</div>
 		</div>
 	)
 }
