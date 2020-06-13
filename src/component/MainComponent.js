@@ -29,16 +29,33 @@ class Main extends Component {
 			)
 		}
 
-		const DrinkWithCategory = ({ match }) => {
-			const filteredDrinks = this.state.drinks.filter((drink) => drink.category[0] === match.params.drink_category)[0].category[0];
-			
+		const CategoryWithItems = ({ match }) => {
+			const filteredDrinks = this.state.drinks.filter(
+				(drink) => drink.category[0] === match.params.drink_category
+			)[0].category[0];
+
 			return (
 				<CategoryItems
 					category={filteredDrinks}
-          			drinks={this.state.drinks}
+					drinks={this.state.drinks}
 				/>
 			)
 		}
+
+		const DrinkItem = ({ match }) => {
+			const filteredDrinks = this.state.drinks.filter(
+				(drink) => drink.name === match.params.drink_name
+			)[0].name;
+			console.log(filteredDrinks)
+
+			return (
+				<CategoryItems
+					category={filteredDrinks}
+					drinks={this.state.drinks}
+				/>
+			)
+		}
+
 
 		return (
 			<div className="wrapper">
@@ -57,10 +74,9 @@ class Main extends Component {
 					/>
 					<Route
 						path="/:drink_category"
-						component={DrinkWithCategory}
+						component={CategoryWithItems}
 					/>
-					<Route path="/:drink_category/:drink_name" component={ItemComponent} />
-					{/* Needs to be based on drink id */}
+					<Route path="/:drink_name" component={DrinkItem} />
 					<Redirect to="/home" />
 				</Switch>
 				<Footer />

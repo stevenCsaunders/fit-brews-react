@@ -34,7 +34,9 @@ function RenderItemCard({ name, image, description, category }) {
 				</CardText>
 				</Link>
 			</CardBody>
-			<Button className="item-card-button">See Recipe</Button>
+			<Link to={`/${name}`}>
+				<Button className="item-card-button">See Recipe</Button>
+			</Link>
 		</Card>
 	)
 }
