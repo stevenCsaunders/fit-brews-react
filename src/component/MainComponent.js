@@ -30,14 +30,11 @@ class Main extends Component {
 		}
 
 		const DrinkWithCategory = ({ match }) => {
-			console.log("Below!")
-			console.log(match);
+			const filteredDrinks = this.state.drinks.filter((drink) => drink.category[0] === match.params.drink_category)[0].category[0];
+			
 			return (
 				<CategoryItems
-					category={this.state.drinks.filter(
-						(drink) =>
-							drink.category === +match.params.drink_category
-					)}
+					category={filteredDrinks}
           			drinks={this.state.drinks}
 				/>
 			)

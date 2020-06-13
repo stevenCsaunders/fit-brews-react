@@ -12,7 +12,7 @@ import {
 function RenderItemCard({ name, image, description, category }) {
 	return (
 		<Card className="item-card">
-			<Link to={`/categories/${category}/${name}`}>
+			<Link to={`/${category}/${name}`}>
 				<CardImg
 					className="item-card-image"
 					src={image}
@@ -20,7 +20,7 @@ function RenderItemCard({ name, image, description, category }) {
 				/>
 			</Link>
 			<CardBody className="item-card-body">
-				<Link to={`/categories/${category}/${name}`}>
+				<Link to={`/${category}/${name}`}>
 					<CardTitle className="item-card-name">
 						<h5>{name}</h5>
 					</CardTitle>
