@@ -1,6 +1,6 @@
 import React from 'react'
 
-const ItemComponent = () => {
+const ItemComponent = ({ drinkName }) => {
 	return (
 		<div className="container">
 			<div className="row">
@@ -12,7 +12,7 @@ const ItemComponent = () => {
 						/>
 					</div>
 					<div className="row drink-title">
-						<h2>Drink Name</h2>
+						<h2>{drinkName}</h2>
 						<h5>Drink description will go here.</h5>
 						<p>Rating: 4/5</p>
 					</div>

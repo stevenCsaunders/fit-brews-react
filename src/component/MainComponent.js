@@ -5,8 +5,8 @@ import Hero from './NavBarComponent'
 import HomePage from './HomeComponent'
 import CategoryList from './CategoryListComponent'
 import CategoryItems from './CategoryItemsComponent'
-import Footer from './Footer'
 import ItemComponent from './ltemComponent'
+import Footer from './Footer'
 
 class Main extends Component {
 	constructor(props) {
@@ -44,16 +44,15 @@ class Main extends Component {
 		}
 
 		const DrinkItem = ({ match }) => {
-			const filteredDrinks = this.state.drinks.filter(
+			const filteredDrink = this.state.drinks.filter(
 				(drink) => drink.name === match.params.drink_name
 			)[0].name;
-			console.log(filteredDrinks)
+			console.log(filteredDrink)
 
 			return (
-				<CategoryItems
-					category={filteredDrinks}
-					drinks={this.state.drinks}
-				/>
+				<div>
+					This works!
+				</div>
 			)
 		}
 
@@ -73,12 +72,11 @@ class Main extends Component {
 							/>
 						)}
 					/>
-					<Route path="/:drink_name" exact component={DrinkItem} />
 					<Route
-						path="/:drink_category"
-						exact
+						path="/category/:drink_category"
 						component={CategoryWithItems}
 					/>
+					<Route path="/drink/:drink_name" component={DrinkItem} />
 					<Redirect to="/home" />
 				</Switch>
 				<Footer />

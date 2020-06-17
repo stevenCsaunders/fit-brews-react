@@ -26,7 +26,7 @@ const CategoryCardContainer = ({ drinks, category }) => {
 
 	return (
 		<div className="container item-card-container category">
-				<Link to={`/${category}`}>
+				<Link to={`category/${category}`}>
 					<h3 className="item-container-title">Best {category} Drinks</h3>
 				</Link>
 				<div className="row">{drinkCategory}</div>
