@@ -15,8 +15,8 @@ function RenderItems({drinks, category}) {
 					/>
 				</div>
 			)
-		}
-	});
+		} return <div/>
+	})
 
 	return (
 		<div>{drinkArray}</div>

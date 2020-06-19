@@ -47,10 +47,8 @@ class Main extends Component {
 			const filteredDrink = this.state.drinks.filter(
 				(drink) => drink.name === match.params.drink_name
 			)[0]
-			console.log(filteredDrink)
 
 			return (
-				<div>
 					<ItemComponent
 						name={filteredDrink.name}
 						description={filteredDrink.description}
@@ -60,7 +58,6 @@ class Main extends Component {
 						id={filteredDrink.id}
 						image={filteredDrink.image}
 					/>
-				</div>
 			)
 		}
 
