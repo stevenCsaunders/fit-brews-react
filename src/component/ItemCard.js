@@ -12,7 +12,7 @@ import {
 function RenderItemCard({ name, image, description, category }) {
 	return (
 		<Card className="item-card">
-			<Link to={`/${category}/${name}`}>
+			<Link to={`/drink/${name}`}>
 				<CardImg
 					className="item-card-image"
 					src={image}
@@ -20,7 +20,7 @@ function RenderItemCard({ name, image, description, category }) {
 				/>
 			</Link>
 			<CardBody className="item-card-body">
-				<Link to={`/${category}/${name}`}>
+				<Link to={`/drink/${name}`}>
 					<CardTitle className="item-card-name">
 						<h5>{name}</h5>
 					</CardTitle>
@@ -28,13 +28,13 @@ function RenderItemCard({ name, image, description, category }) {
 				<CardText className="item-card-description">
 					{description}
 				</CardText>
-				<Link to={`/${category}`}>
+				<Link to={`category/${category}`}>
 				<CardText className="item-card-description">
 					{category}
 				</CardText>
 				</Link>
 			</CardBody>
-			<Link to={`/${name}`}>
+			<Link to={`/drink/${name}`}>
 				<Button className="item-card-button">See Recipe</Button>
 			</Link>
 		</Card>

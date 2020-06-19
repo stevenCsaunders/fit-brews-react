@@ -5,7 +5,7 @@ import Hero from './NavBarComponent'
 import HomePage from './HomeComponent'
 import CategoryList from './CategoryListComponent'
 import CategoryItems from './CategoryItemsComponent'
-import ItemComponent from './ltemComponent'
+import ItemComponent from './ItemComponent'
 import Footer from './Footer'
 
 class Main extends Component {
@@ -30,10 +30,10 @@ class Main extends Component {
 		}
 
 		const CategoryWithItems = ({ match }) => {
-			console.log(match);
+			console.log(match)
 			const filteredDrinks = this.state.drinks.filter(
 				(drink) => drink.category[0] === match.params.drink_category
-			)[0].category[0];
+			)[0].category[0]
 
 			return (
 				<CategoryItems
@@ -46,16 +46,23 @@ class Main extends Component {
 		const DrinkItem = ({ match }) => {
 			const filteredDrink = this.state.drinks.filter(
 				(drink) => drink.name === match.params.drink_name
-			)[0].name;
+			)[0]
 			console.log(filteredDrink)
 
 			return (
 				<div>
-					This works!
+					<ItemComponent
+						name={filteredDrink.name}
+						description={filteredDrink.description}
+						ingredients={filteredDrink.ingredients}
+						instructions={filteredDrink.instructions}
+						rating={filteredDrink.rating}
+						id={filteredDrink.id}
+						image={filteredDrink.image}
+					/>
 				</div>
 			)
 		}
-
 
 		return (
 			<div className="wrapper">
