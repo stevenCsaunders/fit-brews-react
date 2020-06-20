@@ -23,7 +23,7 @@ export const DRINKS = [
         name: "Banana",
         image:  "https://www.thespruceeats.com/thmb/urVQLwUIGGwae44eSRNOC1JLOv8=/3909x2199/smart/filters:no_upscale()/banana-smoothie-recipes-759606-hero-01-d2abaa79f3204030a0ec0a8940456acc.jpg",
         ingredients:["Ingredient 1", "Ingredient 2", "Ingredient 3"],
-        instructions: ["Step 1", "Step 2", "Step 3"],
+        instructions: ["Banana 1", "Step 2", "Banana 3"],
         featured: false,
         nutrition: {
             calories: 189,
