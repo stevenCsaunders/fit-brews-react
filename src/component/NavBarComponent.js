@@ -1,13 +1,13 @@
-import React from 'react';
-import TopNav from './TopNavComponent';
+// import React from 'react';
+// import TopNav from './TopNavComponent';
 
-const HeaderNav = () => {
-        return (
-            <div className="hero">
-                <TopNav />
-            </div>
-        );
-    }
+// const HeaderNav = () => {
+//         return (
+//             <div className="hero">
+//                 <TopNav />
+//             </div>
+//         );
+//     }
 
 
-export default HeaderNav;
+// export default HeaderNav;

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Switch, Route, Redirect } from 'react-router-dom'
 import { DRINKS } from '../shared/drinks'
-import Hero from './NavBarComponent'
+import TopNav from './TopNavComponent';
 import HomePage from './HomeComponent'
 import CategoryList from './CategoryListComponent'
 import CategoryItems from './CategoryItemsComponent'
@@ -63,7 +63,7 @@ class Main extends Component {
 
 		return (
 			<div className="wrapper">
-				<Hero />
+				<TopNav drinks={this.state.drinks}/>
 				<Switch>
 					<Route exact path="/" component={Home} />
 					<Route
