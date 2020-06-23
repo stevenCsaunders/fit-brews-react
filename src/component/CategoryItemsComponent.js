@@ -2,7 +2,7 @@ import React from 'react'
 import RenderItemCard from './ItemCard';
 
 function RenderItems({drinks, category}) {
-	
+	console.log(drinks)
 	const drinkArray = drinks.map(drink => {
 		if(drink.category[0] === category) {
 			return (

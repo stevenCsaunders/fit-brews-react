@@ -86,11 +86,15 @@
 	}
 }
 
-.carouselImage {
-	width: 100%;
-	
-	
+.carousel {
+	margin-bottom: 3rem;
 }
+
+.carousel-item > img { 
+	width: 100%; 
+	height: 50vh;
+	object-fit: cover;
+  }
 
 // Footer Component
 footer {
