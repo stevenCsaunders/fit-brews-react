@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Switch, Route, Redirect } from 'react-router-dom'
 import { DRINKS } from '../shared/drinks'
 import TopNav from './TopNavComponent';
+import HeroCarousel from './HeroCarousel';
 import HomePage from './HomeComponent'
 import CategoryList from './CategoryListComponent'
 import CategoryItems from './CategoryItemsComponent'
@@ -22,10 +23,15 @@ class Main extends Component {
 
 		const Home = () => {
 			return (
-				<HomePage
-					drinks={this.state.drinks}
-					uniqueCategories={uniqueCategories}
-				/>
+				<>
+					<div>
+						<HeroCarousel drinks={this.state.drinks} />
+					</div>
+					<HomePage
+						drinks={this.state.drinks}
+						uniqueCategories={uniqueCategories}
+					/>
+				</>
 			)
 		}
 
