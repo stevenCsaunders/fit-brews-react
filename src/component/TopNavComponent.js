@@ -38,7 +38,7 @@ class TopNav extends Component {
 					<div className="container">
 						<NavbarBrand className="mr-auto" href="/home">
 							<img
-								src='../shared/images/logo.png'c
+								src={require('../shared/images/logo.png')}
 								alt="fit brews logo"
 								className="mr-5"
 							/>
