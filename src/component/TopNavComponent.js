@@ -38,7 +38,7 @@ class TopNav extends Component {
 					<div className="container">
 						<NavbarBrand className="mr-auto" href="/home">
 							<img
-								src="https://i.gyazo.com/35e5d83ca78e7983c945e7ef6db7808d.png"
+								src='../shared/images/logo.png'c
 								alt="fit brews logo"
 								className="mr-5"
 							/>
