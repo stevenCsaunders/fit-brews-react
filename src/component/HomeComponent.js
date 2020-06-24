@@ -27,7 +27,6 @@ const HomePage = ({ drinks, uniqueCategories }) => {
 	const DynamicMap = [];
 	while (DynamicMap.length < uniqueCategories.length) {
 		DynamicMap.push(<RandomizedCategories />);
-		console.log(DynamicMap);
 	};
 	//End Randomized Dynamic Category Containers
 
