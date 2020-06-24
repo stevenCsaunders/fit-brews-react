@@ -27,6 +27,7 @@
 	}
 }
 
+
 //Category Drinks Container
 .category {
 	margin-bottom: 5rem;
@@ -58,6 +59,10 @@
 	}
 }
 
+.item-card-container {
+	margin-top: 5rem;
+}
+
 .item-card-image {
 	object-fit: cover;
 	border: none;
@@ -86,11 +91,15 @@
 	}
 }
 
-.carouselImage {
-	width: 100%;
-	
-	
+.carousel {
+	margin-bottom: 3rem;
 }
+
+.carousel-item > img { 
+	width: 100%; 
+	height: 50vh;
+	object-fit: cover;
+  }
 
 // Footer Component
 footer {
