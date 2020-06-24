@@ -4,8 +4,32 @@ import CategoryCardContainer from './CategoryCardContainer'
 import ReviewHomeComponent from './ReviewHomeComponent'
 import RenderCarousel from './CarouselComponent'
 
-const HomePage = ({ drinks }) => {
-	const randomDrink = drinks[Math.floor(Math.random() * drinks.length)]
+const HomePage = ({ drinks, uniqueCategories }) => {
+
+	//Randomized Dynamic Category Containers
+	const categoryCopy = [...uniqueCategories];
+	let randomizer = Math.floor(Math.random() * categoryCopy.length);
+
+	const RandomizedCategories = () => {
+		randomizer = Math.floor(Math.random() * categoryCopy.length);
+		let category = categoryCopy.splice(randomizer, 1);
+
+		return (
+			<div className="row">
+				<CategoryCardContainer
+					drinks={drinks}
+					category={category[0]}
+				/>
+			</div>
+		)
+	}
+
+	const DynamicMap = [];
+	while (DynamicMap.length < uniqueCategories.length) {
+		DynamicMap.push(<RandomizedCategories />);
+		console.log(DynamicMap);
+	};
+	//End Randomized Dynamic Category Containers
 
 	return (
 		<>
@@ -14,12 +38,7 @@ const HomePage = ({ drinks }) => {
 				<div className="row">
 					<FeaturedCardContainer drinks={drinks} />
 				</div>
-				<div className="row">
-					<CategoryCardContainer
-						drinks={drinks}
-						category={randomDrink.category[0]}
-					/>
-				</div>
+				{DynamicMap.map(category => category)}
 			</div>
 			<ReviewHomeComponent drinks={drinks} />
 		</>
