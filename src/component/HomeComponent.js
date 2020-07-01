@@ -2,7 +2,7 @@ import React from 'react'
 import FeaturedCardContainer from './FeaturedCardContainer'
 import CategoryCardContainer from './CategoryCardContainer'
 import ReviewHomeComponent from './ReviewHomeComponent'
-import RenderCarousel from './CarouselComponent'
+import RenderCarousel from './HomeCarouselComponent'
 
 const HomePage = ({ drinks }) => {
 	const randomDrink = drinks[Math.floor(Math.random() * drinks.length)]
@@ -10,17 +10,11 @@ const HomePage = ({ drinks }) => {
 	return (
 		<>
 			<RenderCarousel drinks={drinks} />
-			<div className="container">
-				<div className="row">
-					<FeaturedCardContainer drinks={drinks} />
-				</div>
-				<div className="row">
-					<CategoryCardContainer
-						drinks={drinks}
-						category={randomDrink.category[0]}
-					/>
-				</div>
-			</div>
+			<FeaturedCardContainer drinks={drinks} />
+			<CategoryCardContainer
+				drinks={drinks}
+				category={randomDrink.category[0]}
+			/>
 			<ReviewHomeComponent drinks={drinks} />
 		</>
 	)
