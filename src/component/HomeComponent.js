@@ -36,6 +36,7 @@ import { Row, Container } from 'reactstrap'
 			<Container>
 				{DynamicMap.map(category => category)}
 			</Container>
+
 			<ReviewHomeComponent drinks={drinks} />
 		</>
 	)

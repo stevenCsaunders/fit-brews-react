@@ -164,7 +164,7 @@ export const DRINKS = [
     },
     {
         id: 9,
-        name: "Mango",
+        name: "Water",
         image:  "https://chowhound1.cbsistatic.com/thumbnail/1280/800/chowhound1.cbsistatic.com/assets/models/promotions/photos/29115/original/MangoLemonade-AyeshaCurry.jpg",
         ingredients:["Ingredient 1", "Ingredient 2", "Ingredient 3"],
         instructions: ["Step 1", "Step 2", "Step 3"],
@@ -179,5 +179,41 @@ export const DRINKS = [
         category:["Liquid"], //used for drink categories
         review: "Pork loin tenderloin chuck landjaeger hamburger, velit aliqua cupidatat quis capicola laboris shoulder.", //This will be broken out in to a separate review.js file 
         rating: 5
-    }
+    },
+    {
+        id: 10,
+        name: "Soda",
+        image:  "https://chowhound1.cbsistatic.com/thumbnail/1280/800/chowhound1.cbsistatic.com/assets/models/promotions/photos/29115/original/MangoLemonade-AyeshaCurry.jpg",
+        ingredients:["Ingredient 1", "Ingredient 2", "Ingredient 3"],
+        instructions: ["Step 1", "Step 2", "Step 3"],
+        featured: false,
+        nutrition: {
+            calories: 189,
+            protien: 20,
+            carbs: 10,
+            fat: 8,
+        },
+        description: "This is the description",
+        category:["Liquid"], //used for drink categories
+        review: "Pork loin tenderloin chuck landjaeger hamburger, velit aliqua cupidatat quis capicola laboris shoulder.", //This will be broken out in to a separate review.js file 
+        rating: 5
+    },
+    {
+        id: 11,
+        name: "Milk",
+        image:  "https://chowhound1.cbsistatic.com/thumbnail/1280/800/chowhound1.cbsistatic.com/assets/models/promotions/photos/29115/original/MangoLemonade-AyeshaCurry.jpg",
+        ingredients:["Ingredient 1", "Ingredient 2", "Ingredient 3"],
+        instructions: ["Step 1", "Step 2", "Step 3"],
+        featured: false,
+        nutrition: {
+            calories: 189,
+            protien: 20,
+            carbs: 10,
+            fat: 8,
+        },
+        description: "This is the description",
+        category:["Liquid"], //used for drink categories
+        review: "Pork loin tenderloin chuck landjaeger hamburger, velit aliqua cupidatat quis capicola laboris shoulder.", //This will be broken out in to a separate review.js file 
+        rating: 5
+    },
 ]
