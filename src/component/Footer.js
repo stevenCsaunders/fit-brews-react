@@ -1,7 +1,6 @@
 import React from 'react'
-import { Button, Label, Col, Row } from 'reactstrap'
+import { Button, Label, Col, Row, Container } from 'reactstrap'
 import { Control, LocalForm, Errors } from 'react-redux-form'
-import { Link } from 'react-router-dom'
 
 const validEmail = (val) =>
 	/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
@@ -13,13 +12,16 @@ const handleSubmit = (value) => {
 
 const Footer = () => {
 	return (
-		<footer className="footer">
+		<footer className="footer py-5">
 			<div className="container">
-				<div className="row d-felx flex-column flex-md-row flex-nowrap">
-					<FooterContact />
-					<FooterSocial />
-					<FooterNav />
-				</div>
+				<Row xs="1" sm="2" className="">
+					<Col className="px-5">
+						<FooterContact />
+					</Col>
+					<Col>
+						<FooterSocial />
+					</Col>
+				</Row>
 			</div>
 		</footer>
 	)
@@ -27,19 +29,29 @@ const Footer = () => {
 
 const FooterContact = () => {
 	return (
-		<div className="footer-contact d-flex flex-column align-items-center align-items-md-start px-5 px-md-4">
-			<h5>Contact Us</h5>
-			<p>
-				Want to have all the latest and greatest recipes sent directly
-				to your inbox?
-			</p>
+		<Container className="footer-contact text-center text-sm-left pb-4 pb-md-0">
+			<Row className="pb-3">
+				<Col>
+					<h5>Contact Us</h5>
+				</Col>
+			</Row>
+			<Row>
+				<Col>
+					<p>
+						Want to have all the latest and greatest recipes sent
+						directly to your inbox?
+					</p>
+				</Col>
+			</Row>
 			<LocalForm
-				className="footer-email-form"
+				className="footer-email-form pb-3"
 				onSubmit={(value) => handleSubmit(value)}
 			>
-				<Row className="form-group d-felx flex-column flex-md-row mt-md-2">
-					<Col className="pr-md-1">
-						<Label htmlFor="email" className="sr-only">Your Email</Label>
+				<Row xs="1" md="2">
+					<Col xs="12" md="8" className="pr-md-1 pb-2">
+						<Label htmlFor="email" className="sr-only">
+							Your Email
+						</Label>
 						<Control.text
 							model=".email"
 							name="email"
@@ -63,68 +75,87 @@ const FooterContact = () => {
 						/>
 					</Col>
 
-					<Col className="px-md-0 py-2 py-md-0 col-md-2">
-						<Button type="submit" outline color="light" className="email-submit-button" >
+					<Col xs="12" md="4" className="pl-md-1">
+						<Button
+							type="submit"
+							outline
+							color="light"
+							className="email-submit-button btn-block px-2"
+						>
 							<i className="fa fa-paper-plane"></i>
 						</Button>
 					</Col>
 				</Row>
 			</LocalForm>
-			<p>98 Adams St. | Kalispell | MT 59901</p>
-			<p>(555) 555-5555</p>
-		</div>
+			<Row>
+				<Col>
+					<p>98 Adams St. | Kalispell | MT 59901</p>
+				</Col>
+			</Row>
+			<Row>
+				<Col>
+					<p>(555) 555-5555</p>
+				</Col>
+			</Row>
+		</Container>
 	)
 }
 
 const FooterSocial = () => {
 	return (
-		<div className="footer-social align-items-center align-items-md-start mx-md-4 my-md-0 my-4 px-0 px-md-4">
-			<h5>Connect With Us</h5>
-			<a className="footer-logo mb-3" href="#">
-				<img
-					src={require("../shared/images/logo.png")}
-					className="logo"
-					alt="Fit Brews"
-				/>
-			</a>
-			<p className="d-none d-sm-inline-block">Share your favorite drink recipes!</p>
-			<ul className="social-icons d-flex align-items-start">
-				<li className="social-icon">
-					<a className="btn btn-social-icon">
-						<span className="fa fa-twitter"></span>
+		<Container className="footer-social text-center text-sm-left">
+			<Row className="pb-3">
+				<Col>
+					<h5>Connect With Us</h5>
+				</Col>
+			</Row>
+			<Row>
+				<Col className="pb-3 d-none d-md-block">
+					<a className="footer-logo " href="/">
+						<img
+							src={require('../shared/images/logo.svg')}
+							className="w-50"
+							alt="Fit Brews"
+							
+						/>
 					</a>
-				</li>
-				<li className="social-icon">
-					<a className="btn btn-social-icon">
-						<i className="fa fa-facebook"></i>
-					</a>
-				</li>
-				<li className="social-icon">
-					<a className="btn btn-social-icon">
-						<span className="fa fa-instagram"></span>
-					</a>
-				</li>
-			</ul>
-		</div>
-	)
-}
-
-const FooterNav = () => {
-	return (
-		<div className="footer-support px-0 px-md-4">
-			<h5>Support</h5>
-			<ul className="navbar-nav footer-nav">
-				<li className="support-item">
-					<Link to="/tags">About</Link>
-				</li>
-				<li className="support-item">
-					<Link to="/home">Contact</Link>
-				</li>
-				<li className="support-item">
-					<Link to="/tags">FAQ</Link>
-				</li>
-			</ul>
-		</div>
+				</Col>
+			</Row>
+			<Row>
+				<Col>
+					<p className="d-none d-sm-inline-block">
+						Share your favorite drink recipes!
+					</p>
+				</Col>
+			</Row>
+			<Row>
+				<Col>
+					<ul className="social-icons d-flex justify-content-center justify-content-sm-start pl-sm-0">
+						<li className="social-icon">
+							<a
+								href="https://twitter.com"
+							>
+								<span className="fa fa-twitter"></span>
+							</a>
+						</li>
+						<li className="social-icon">
+							<a
+								href="https://facebook.com"
+							>
+								<i className="fa fa-facebook"></i>
+							</a>
+						</li>
+						<li className="social-icon">
+							<a
+								href="https://facebook.com"
+							>
+								<span className="fa fa-instagram"></span>
+							</a>
+						</li>
+					</ul>
+				</Col>
+			</Row>
+		</Container>
 	)
 }
 

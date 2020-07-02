@@ -14,8 +14,6 @@ const RenderCarousel = ({ drinks }) => {
             }
         )
 	})
-
-	console.log(heroDrinks)
 	return <UncontrolledCarousel items={heroDrinks} />
 }
 

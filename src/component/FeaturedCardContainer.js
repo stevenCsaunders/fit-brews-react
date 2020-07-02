@@ -1,6 +1,6 @@
 import React from 'react'
 import RenderItemCard from './ItemCard'
-
+import { Col, Row, Container } from 'reactstrap'
 
 const FeaturedCardContainer = ({ drinks }) => {
 	const checkFeatured = (drink) => drink.featured === true
@@ -9,22 +9,26 @@ const FeaturedCardContainer = ({ drinks }) => {
 		.slice(0, 3)
 		.map((drink) => {
 			return (
-				<div className="col col-md-4" key={drink.id}>
+				<Col className="col col-md-4" key={drink.id}>
 					<RenderItemCard
 						name={drink.name}
 						image={drink.image}
 						description={drink.description}
 						category={drink.category}
 					/>
-				</div>
+				</Col>
 			)
 		})
 
 	return (
-		<div className="container item-card-container featured">
-			<h3 className="mb-0 item-container-title">Featured Drinks for Spring</h3>
-			<div className="row mt-0 pt-0">{featuredDrinks}</div>
-		</div>
+		<Container className="container item-card-container featured">
+			<Row>
+				<h3 className="mb-0 item-container-title">
+					Featured Drinks for Spring
+				</h3>
+			</Row>
+			<Row xs="1" md="3">{featuredDrinks}</Row>
+		</Container>
 	)
 }
 
