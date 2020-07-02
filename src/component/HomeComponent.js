@@ -3,18 +3,39 @@ import FeaturedCardContainer from './FeaturedCardContainer'
 import CategoryCardContainer from './CategoryCardContainer'
 import ReviewHomeComponent from './ReviewHomeComponent'
 import RenderCarousel from './HomeCarouselComponent'
+import { Row, Container } from 'reactstrap'
 
-const HomePage = ({ drinks }) => {
-	const randomDrink = drinks[Math.floor(Math.random() * drinks.length)]
+	const HomePage = ({ drinks, uniqueCategories }) => {
 
+		//Randomized Dynamic Category Containers
+		const categoryCopy = [...uniqueCategories];
+		let randomizer = Math.floor(Math.random() * categoryCopy.length);
+	
+		const RandomizedCategories = () => {
+			randomizer = Math.floor(Math.random() * categoryCopy.length);
+			let category = categoryCopy.splice(randomizer, 1);
+	
+			return (
+				<Row>
+					<CategoryCardContainer
+						drinks={drinks}
+						category={category[0]}
+					/>
+				</Row>
+			)
+		}
+	
+		const DynamicMap = [];
+		while (DynamicMap.length < uniqueCategories.length) {
+			DynamicMap.push(<RandomizedCategories />);
+		};
 	return (
 		<>
 			<RenderCarousel drinks={drinks} />
 			<FeaturedCardContainer drinks={drinks} />
-			<CategoryCardContainer
-				drinks={drinks}
-				category={randomDrink.category[0]}
-			/>
+			<Container>
+				{DynamicMap.map(category => category)}
+			</Container>
 			<ReviewHomeComponent drinks={drinks} />
 		</>
 	)
