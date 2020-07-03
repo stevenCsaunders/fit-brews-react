@@ -7,11 +7,10 @@ import {
 	Button,
 	Modal,
 	ModalHeader,
-	Col,
 	ModalBody,
 } from 'reactstrap'
 
-const SearchModal = (props) => {
+const SearchModal = () => {
 	const [modal, setModal] = useState(false)
 	const toggle = () => setModal(!modal)
 	const handleSubmit = () => console.log("You're Searching Now")
