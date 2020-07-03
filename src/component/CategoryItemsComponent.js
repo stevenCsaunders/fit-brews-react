@@ -16,7 +16,7 @@ function RenderItems({ drinks, category }) {
 					/>
 				</Col>
 			)
-		} return <div></div>
+		} return null
 	})
 
 	return <Row xs="1" sm="2" lg="4">{drinkArray}</Row>
