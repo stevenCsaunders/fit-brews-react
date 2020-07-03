@@ -50,7 +50,7 @@ class TopNav extends Component {
 						className="text-center"
 					>
 						<Nav
-							className="mr-md-auto mr-0 text-center text-md-left mb-3 mb-md-0 border-left pl-3 "
+							className="mr-md-auto mr-0  text-center text-md-left mb-5 mb-md-0 pl-3 "
 							navbar
 						>
 							<NavItem>
@@ -62,7 +62,7 @@ class TopNav extends Component {
 								</NavLink>
 							</NavItem>
 						</Nav>
-						<Row className="w-50 pb-3">
+						<Row className="w-50 pb-3 mx-auto mx-md-0">
 							<Col >
 								<SearchModal />
 							</Col>

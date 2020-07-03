@@ -110,18 +110,6 @@ const FooterSocial = () => {
 				</Col>
 			</Row>
 			<Row>
-				<Col className="pb-3 d-none d-md-block">
-					<a className="footer-logo " href="/">
-						<img
-							src={require('../shared/images/logo.svg')}
-							className="w-50"
-							alt="Fit Brews"
-							
-						/>
-					</a>
-				</Col>
-			</Row>
-			<Row>
 				<Col>
 					<p className="d-none d-sm-inline-block">
 						Share your favorite drink recipes!
