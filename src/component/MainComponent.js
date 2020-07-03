@@ -77,6 +77,7 @@ class Main extends Component {
 						)}
 					/>
 					<Route
+					exact
 						path="/category/:drink_category"
 						component={CategoryWithItems}
 					/>

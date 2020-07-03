@@ -30,7 +30,7 @@ function RenderItemCard({ name, image, description, category }) {
 				</CardText>
 				
 				<CardText className="item-card-category">
-				<Link to={`category/${category}`} className="category-link">
+				<Link to={`/category/${category}`} className="category-link">
 					{category}
 					</Link>
 				</CardText>
